@@ -1,0 +1,99 @@
+.text-orange {
+    color: #ff7300 !important;
+  }
+  
+  .custom-orange {
+    color: #ff7300 !important;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+  
+  .custom-orange:hover {
+    background-color: #ff7300;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  /* Navbar link hover effect */
+.navbar .nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ff7300 !important;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Adjust height as needed */
+    object-fit: contain; /* Ensures full image is shown without crop */
+  }
+  
+  
+  .carousel-indicators [data-bs-target] {
+    background-color: #ff7300; /* Optional: match brand color */
+  }
+
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(217, 36, 36, 0.6); /* Dark semi-transparent background */
+  border-radius: 50%;
+  padding: 10px;
+  background-size: 50% 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Optional: reduce button width area */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.7); /* Black background */
+  border-radius: 50%;                  /* Rounded shape */
+  width: 40px;                         /* Larger size */
+  height: 40px;
+  background-size: 60% 60%;            /* Shrink arrow inside */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optional: adjust hit area */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4); /* Subtle black overlay */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .about-section {
+    background: linear-gradient(135deg, #ff7300, #ff9a3c);
+    color: white;
+  }
+  
+  .text-orange {
+    color: #ff7300;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-in-out both;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .text-orange {
+    color: #ff7300;
+  }
+  .text-orange:hover {
+    color: #e86100;
+  }
+  

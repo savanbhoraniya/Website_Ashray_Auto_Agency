@@ -1,0 +1,203 @@
+
+
+<main class="hero">
+ <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<?php include 'includes/header.php'; ?>
+
+
+
+ <!-- Image Slideshow -->
+ <div id="homeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active position-relative">
+      <a href="index.php"> <!-- Wrap the first image with a link to index.php -->
+        <img src="IMAGES/slides1.jpg" class="d-block w-100 carousel-image" alt="Slide 1">
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+          <h2 class="display-5 fw-bold text-orange" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+            Your trusted destination for quality spare parts
+          </h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Remove the controls and indicators as only one image is used now -->
+</div>
+
+
+<!-- About Us Section -->
+<!-- About Us Section -->
+<!-- About Us Section with Counters -->
+<!-- About Us Section with Counters -->
+<section class="py-5 bg-light"> <!-- Changed from bg-white to bg-light -->
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <h2 class="fw-bold text-orange"><span class="counter" data-target="20">0</span>+</h2>
+        <p class="text-muted fs-6">Years of Experience</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h2 class="fw-bold text-orange"><span class="counter" data-target="250">0</span>+</h2>
+        <p class="text-muted fs-6">Retailers Connected</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h2 class="fw-bold text-orange"><span class="counter" data-target="500">0</span>+</h2>
+        <p class="text-muted fs-6">Products</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left: Text Content -->
+      <div class="col-md-6 order-2 order-md-1 text-start">
+        <h4 class="text-black fw-bold mb-3">About Our Company</h4>
+        <div style="width: 50px; height: 4px; background-color: #ff7300; margin-bottom: 20px; margin-top: -9px;"></div> 
+
+        <h2 class="fw-bold text-orange">Ashray Auto Agency</h2>
+        <p class="text-muted fs-5 mt-3">
+          Ashray Auto Agency is the prominent name in the wholesale business of two wheeler auto spare parts covering Geared as well as Moped vehicles. Distributing two wheeler spare parts in the region of Kutchchh and Saurashtra since 20+ years to the 250+ retailers.
+        </p>
+        <a href="about.php" class="btn btn-orange mt-2">READ MORE</a>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="col-md-6 order-1 order-md-2 text-center">
+        <img src="IMAGES/about.png" alt="About Us Image" class="img-fluid rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Custom Button Style 
+<style>
+  .btn-orange {
+    background-color: #ff7300;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+
+  .btn-orange:hover {
+    background-color: #e86200;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+  .text-orange {
+    color: #ff7300 !important;
+  }
+</style> -->
+
+<!-- Counter Script -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200;
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        updateCount();
+        observer.unobserve(counter);
+      }
+    }, { threshold: 0.6 });
+
+    observer.observe(counter);
+  });
+</script>
+
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Our Trusted Manufacturers</h2>
+    <div class="manufacturer-slider">
+      <div class="logo-track">
+        <!-- Repeat logos for seamless scroll -->
+        <img src="IMAGES/honda wbg.png" alt="Logo 1">
+        <img src="IMAGES/hero wbg.png" alt="Logo 2">
+        <img src="IMAGES/bajaj.png" alt="Logo 3">
+        <img src="IMAGES/fiem-wbg.png" alt="Logo 4">
+        <img src="IMAGES/pricol-wbg.png" alt="Logo 5">
+        <img src="IMAGES/tvs-wbg.png" alt="Logo 1">
+        <img src="IMAGES/varroc2-wbg.png" alt="Logo 2">
+        <img src="IMAGES/endurance-wbg.png" alt="Logo 3">
+        <img src="IMAGES/yango-wbg.png" alt="Logo 4">
+        <img src="IMAGES/mebesto-wbg.png" alt="Logo 5">
+        <img src="IMAGES/lg_bala-wbg.png" alt="Logo 5">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.manufacturer-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(200px * 10); /* Adjust based on number of logos */
+  animation: scrollLogos 30s linear infinite;
+}
+
+.logo-track img {
+  width: 150px;
+  height: auto;
+  margin: 0 20px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo-track img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+</style>
+
+
+
+
+
+
+
+</main>
+
+<?php include 'includes/footer.php'; ?>
