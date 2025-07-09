@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | Ashray Auto Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Top Bar */
+    .top-contact-bar {
+      background: linear-gradient(to right, #fff4e6, #ffe8cc);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .top-contact-bar a {
+      color: #333;
+      text-decoration: none;
+    }
+    .top-contact-bar a:hover {
+      color: #ff7300;
+    }
+
+    /* Navbar */
+    .navbar-nav .nav-link {
+      padding: 0.6rem 1.2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #4b4b4b !important;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ff7300 !important;
+      background-color: rgba(255, 115, 0, 0.08);
+      border-radius: 5px;
+      transform: translateY(-2px);
+    }
+
+    .btn-orange, .btn-quote {
+      background-color: #ff7300;
+      color: white;
+      border-radius: 15px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-orange:hover, .btn-quote:hover {
+      background-color: #e75f00;
+      transform: translateY(-2px);
+    }
+
+    .heading-underline::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 4px;
+      background-color: #ff7300;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    .text-orange {
+      color: #ff7300;
+    }
+
+    /* Leader Image */
+    .leader-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .leader-img:hover {
+      filter: grayscale(0%);
+    }
+
+    .strength-box {
+      background-color: #fff;
+      border-radius: 1rem;
+      border: 1px solid #eee;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .strength-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    .footer-heading {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #212529;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .footer-heading::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background-color: #ff7300;
+      margin-top: 6px;
+      border-radius: 2px;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .footer-link i {
+      font-size: 1rem;
+    }
+
+    .footer-link:hover {
+      color: #ff7300;
+      transform: translateX(4px);
+    }
+
+    /* Back to Top */
+    #backToTopBtn {
+      background-color: #ff7300;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      display: none;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #e96400;
+      transform: scale(1.05);
+    }
+    .leader-box {
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+.heading-underline-custom::after {
+  content: "";
+  display: block;
+  width: 50px; /* Half-width underline */
+  height: 4px;
+  background-color: #ff7300;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+/* Updated Strength Section */
+.strength-section {
+  background: transparent;
+}
+
+.strength-box {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 1.2rem;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.strength-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.strength-icon {
+  font-size: 2.2rem;
+  color: #ff7300;
+  margin-bottom: 15px;
+}
+
+.strength-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.strength-desc {
+  font-size: 0.95rem;
+  color: #666;
+}
+@media (max-width: 767.98px) {
+  .top-contact-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left;
+    gap: 0.5rem;
+  }
+
+  .top-contact-bar > div {
+    width: 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<!-- Top Contact Bar -->
+<div class="top-contact-bar py-2 px-3 d-flex justify-content-end gap-4">
+  <div><i class="fas fa-phone-alt me-2"></i><a href="tel:+919427463698">+91 94274 63698</a></div>
+  <div><i class="fas fa-envelope me-2"></i><a href="mailto:info@ashrayauto.com">info@ashrayauto.com</a></div>
+  <div class="ms-4">We open: Mon to Sat | 8:30 - 20:00 HRS | Sun - Closed</div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="IMAGES/AAA PNG without bg.png" alt="Logo" style="width: 240px; height: 100px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+      </ul>
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item ms-3">
+          <a href="IMAGES/product list.webp" class="btn btn-orange" download>
+            <i class="fas fa-download me-2"></i>Product List
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a href="enquiry.html" class="btn btn-quote">Get a Quote</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<img src="IMAGES/MAIN.jpg" class="d-block w-100" alt="Banner" height="500px">
+
+<!-- About Section -->
+<section class="about-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h3 class="fw text-black mb-4">About Our Company</h3>
+        <div style="width: 50px; height: 4px; background-color: #ff7300; margin-bottom: 20px;"></div>
+        <h2 class="fw-bold text-orange mb-3">Ashray Auto Agency</h2>
+        <p class="text-secondary fs-5 mb-4">
+          Ashray Auto Agency is the prominent name in the wholesale business of two-wheeler auto spare parts, covering geared as well as moped vehicles. Distributing two-wheeler spare parts in the region of Kutchchh and Saurashtra for over 25 years to more than 300 retailers.
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="IMAGES/about.png" alt="About Us" class="img-fluid rounded-3 shadow-sm" style="max-height: 400px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Leadership Section -->
+<!-- Leadership Section with Box Pattern -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+<h2 class="fw-bold text-black mb-2 position-relative heading-underline-custom">Our Leadership</h2>
+    <div class="row justify-content-center g-4">
+      
+      <!-- Leader 1 -->
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 shadow-sm leader-box h-100">
+          <img src="IMAGES/leader1.jpeg.jpg" alt="Leader 1" class="leader-img mb-3">
+          <h5 class="fw-bold text-orange mb-1" >Mr. Suresh Bhoraniya</h5>
+          <p class="text-muted mb-0">Founder</p>
+        </div>
+      </div>
+
+      <!-- Leader 2 -->
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 shadow-sm leader-box h-100">
+          <img src="IMAGES/leader1.jpeg.jpg" alt="Leader 2" class="leader-img mb-3">
+          <h5 class="fw-bold text-orange mb-1">Mr. Tejas Bhoraniya</h5>
+          <p class="text-muted mb-0">Managing Director</p>
+        </div>
+      </div>
+
+      <!-- Leader 3 -->
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 shadow-sm leader-box h-100">
+          <img src="IMAGES/leader1.jpeg.jpg" alt="Leader 3" class="leader-img mb-3">
+          <h5 class="fw-bold text-orange mb-1">Ms. Arvind Patel</h5>
+          <p class="text-muted mb-0">Sales & Marketing Lead</p>
+        </div>
+      </div>
+    
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Strength Section -->
+<!-- Our Strength Section -->
+<!-- Our Strength Section -->
+<section class="py-5 strength-section">
+  <div class="container text-center">
+    <h2 class="fw-bold text-black mb-4 heading-underline-custom">Our Strength</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="strength-box">
+          <div class="strength-icon"><i class="fas fa-award"></i></div>
+          <div class="strength-title">25+ Years of Experience</div>
+          <div class="strength-desc">A legacy of trust and reliability in the spare parts industry.</div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="strength-box">
+          <div class="strength-icon"><i class="fas fa-warehouse"></i></div>
+          <div class="strength-title">7000+ Sq. ft. Warehouse</div>
+          <div class="strength-desc">Large inventory space ensures smooth operations.</div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="strength-box">
+          <div class="strength-icon"><i class="fas fa-industry"></i></div>
+          <div class="strength-title">Trusted Manufacturers</div>
+          <div class="strength-desc">We partner with top brands to deliver quality parts.</div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="strength-box">
+          <div class="strength-icon"><i class="fas fa-users"></i></div>
+          <div class="strength-title">300+ Retailers Connected</div>
+          <div class="strength-desc">Strong and growing distribution network.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="text-dark pt-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+  
+  <img src="IMAGES/AAA PNG without bg.png" alt="Footer Logo" style="max-width: 240px; margin-bottom: 10px;">
+  <p class="text-muted">Your trusted partner for top-quality two-wheeler auto spare parts in Kutchchh and Saurashtra.</p>
+</div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-heading">Quick Links</h5>
+        <a href="index.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Home</a>
+        <a href="about.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>About Us</a>
+        <a href="products.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Products</a>
+        <a href="contact us.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Contact</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-heading">Contact Info</h5>
+        <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>Plot No 49, Sector 8, Gandhidham, Gujarat 370201</p>
+        <p class="mb-1"><i class="fas fa-phone me-2"></i><a href="tel:+919427463698">+91 94274 63698</a></p>
+        <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@ashrayauto.com">info@ashrayauto.com</a></p>
+      </div>
+    </div>
+    <div class="text-center py-3 border-top mt-4">
+      <small>© 2025 Ashray Auto Agency. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Show/hide Back to Top button
+  window.onscroll = function () {
+    document.getElementById('backToTopBtn').style.display =
+      document.documentElement.scrollTop > 200 ? 'block' : 'none';
+  };
+</script>
+</body>
+</html>

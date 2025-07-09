@@ -37,13 +37,12 @@
 
     /* Navbar */
     .navbar-nav .nav-link {
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       font-weight: 600;
+      font-size: 1.1rem;
       color: #4b4b4b !important;
-      position: relative;
       transition: color 0.3s ease, transform 0.3s ease;
     }
-
     .navbar-nav .nav-link:hover {
       color: #ff7300 !important;
       background-color: rgba(255, 115, 0, 0.08);
@@ -51,23 +50,20 @@
       transform: translateY(-2px);
     }
 
-    /* Download Button */
-    .btn-orange {
+    .btn-orange, .btn-quote {
       background-color: #ff7300;
-      color: #fff;
-      border: none;
+      color: white;
       border-radius: 15px;
       padding: 0.4rem 1.2rem;
-    
       font-size: 0.95rem;
       font-weight: 600;
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .btn-orange:hover {
+    .btn-orange:hover, .btn-quote:hover {
       background-color: #e75f00;
       transform: translateY(-2px);
-      color: #fff;
     }
 
     @media (max-width: 991.98px) {
@@ -121,6 +117,67 @@
   outline: none;
   box-shadow: none;
 }
+    /* Footer */
+    .footer-heading {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #212529;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .footer-heading::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background-color: #ff7300;
+      margin-top: 6px;
+      border-radius: 2px;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .footer-link i {
+      font-size: 1rem;
+    }
+
+    .footer-link:hover {
+      color: #ff7300;
+      transform: translateX(4px);
+    }
+
+    /* Back to Top */
+    #backToTopBtn {
+      background-color: #ff7300;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      display: none;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #e96400;
+      transform: scale(1.05);
+    }
+    .leader-box {
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
   </style>
 </head>
@@ -142,36 +199,27 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">
+    <a class="navbar-brand" href="index.html">
       <img src="IMAGES/AAA PNG without bg.png" alt="Logo" style="width: 240px; height: 100px;">
     </a>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
-      <ul class="navbar-nav align-items-center" style="list-style: none; margin: 0; padding: 0;">
-        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact us.php">Contact Us</a></li>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
       </ul>
-
-      <!-- Move both buttons to the right -->
       <ul class="navbar-nav ms-auto align-items-center">
-        <!-- Product List Button -->
         <li class="nav-item ms-3">
-          <a href="IMAGES\product list.webp" class="btn btn-orange btn-sm rounded-pill" download>
-            <i class="fas fa-download me-2"></i> Product List
+          <a href="IMAGES/product list.webp" class="btn btn-orange" download>
+            <i class="fas fa-download me-2"></i>Product List
           </a>
         </li>
-
-        <!-- Get a Quote Button -->
         <li class="nav-item ms-3">
-          <a href="enquiry.php" class="btn btn-quote btn-sm rounded-pill">
-            Get a Quote
-          </a>
+          <a href="enquiry.html" class="btn btn-quote">Get a Quote</a>
         </li>
       </ul>
     </div>
@@ -192,7 +240,7 @@
  <div id="homeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active position-relative">
-      <a href="index.php"> <!-- Wrap the first image with a link to index.php -->
+      <a href="index.html"> <!-- Wrap the first image with a link to index.html -->
         <img src="IMAGES/slides1.jpg" class="d-block w-100 carousel-image" alt="Slide 1">
         <div class="position-absolute top-50 start-50 translate-middle text-center">
           <h2 class="display-5 fw-bold text-orange" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
@@ -215,11 +263,11 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-md-4 mb-3">
-        <h2 class="fw-bold text-orange"><span class="counter" data-target="20">0</span>+</h2>
+        <h2 class="fw-bold text-orange"><span class="counter" data-target="25">0</span>+</h2>
         <p class="text-muted fs-6">Years of Experience</p>
       </div>
       <div class="col-md-4 mb-3">
-        <h2 class="fw-bold text-orange"><span class="counter" data-target="250">0</span>+</h2>
+        <h2 class="fw-bold text-orange"><span class="counter" data-target="300">0</span>+</h2>
         <p class="text-muted fs-6">Retailers Connected</p>
       </div>
       <div class="col-md-4 mb-3">
@@ -242,9 +290,9 @@
 
         <h2 class="fw-bold text-orange">Ashray Auto Agency</h2>
         <p class="text-muted fs-5 mt-3">
-          Ashray Auto Agency is the prominent name in the wholesale business of two wheeler auto spare parts covering Geared as well as Moped vehicles. Distributing two wheeler spare parts in the region of Kutchchh and Saurashtra since 20+ years to the 250+ retailers.
+          Ashray Auto Agency is the prominent name in the wholesale business of two wheeler auto spare parts covering Geared as well as Moped vehicles. Distributing two wheeler spare parts in the region of Kutchchh and Saurashtra since 25+ years to the 3000+ retailers.
         </p>
-        <a href="about.php" class="btn btn-orange mt-2">READ MORE</a>
+        <a href="about.html" class="btn btn-orange mt-2">READ MORE</a>
       </div>
 
       <!-- Right: Image -->
@@ -381,94 +429,51 @@
 <!-- Bootstrap Icons CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+<!-- Back to Top Button -->
+<button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+  ↑ Top
+</button>
+
 <!-- Footer -->
-<!-- Footer -->
-<!-- Footer -->
-<footer class="bg-light text-lg-start mt-5 border-top shadow-sm">
-  <div class="container py-5">
-    <div class="row text-center text-md-start">
-      <!-- About -->
-     <!-- About -->
-<div class="col-md-3 mb-4">
-  <div class="mb-3 text-center text-md-start">
-    <img src="IMAGES/AAA PNG without bg.png" alt="Ashray Auto Agency Logo" style="width: 300px; height: 125px;">
+<footer class="text-dark pt-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+  
+  <img src="IMAGES/AAA PNG without bg.png" alt="Footer Logo" style="max-width: 240px; margin-bottom: 10px;">
+  <p class="text-muted">Your trusted partner for top-quality two-wheeler auto spare parts in Kutchchh and Saurashtra.</p>
+</div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-heading">Quick Links</h5>
+        <a href="index.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Home</a>
+        <a href="about.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>About Us</a>
+        <a href="products.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Products</a>
+        <a href="contactus.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i>Contact</a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-heading">Contact Info</h5>
+        <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>Plot No 49, Sector 8, Gandhidham, Gujarat 370201</p>
+        <p class="mb-1"><i class="fas fa-phone me-2"></i><a href="tel:+919427463698">+91 94274 63698</a></p>
+        <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@ashrayauto.com">info@ashrayauto.com</a></p>
+      </div>
+    </div>
+    <div class="text-center py-3 border-top mt-4">
+      <small>© 2025 Ashray Auto Agency. All rights reserved.</small>
+    </div>
   </div>
-  <p class="text-muted">
-    Ashray Auto Agency is your trusted destination for quality spare parts. We offer a wide range of automotive components with reliable support and warranty.
-  </p>
-</div>
-
-
-     <!-- Quick Links -->
-<div class="col-md-6 mb-4 d-flex flex-column align-items-center">
-  <h5 class="footer-heading">Quick Links</h5>
-  <ul class="list-unstyled">
-    <li><a href="index.php" class="footer-link"><i class="bi bi-house-door-fill me-2"></i>Home</a></li>
-    <li><a href="about.php" class="footer-link"><i class="bi bi-info-circle-fill me-2"></i>About Us</a></li>
-    <li><a href="products.php" class="footer-link"><i class="bi bi-box-seam me-2"></i>Products</a></li>
-    <li><a href="contact us.php" class="footer-link"><i class="bi bi-envelope-fill me-2"></i>Contact Us</a></li>
-  </ul>
-</div>
-
-<!-- Contact -->
-<div class="col-md-3 mb-4">
-  <h5 class="footer-heading">Contact Us</h5>
-  <ul class="list-unstyled text-muted">
-
-
-   <!-- Address with Icon -->
-   <li class="d-flex align-items-start mb-2">
-      <i class="bi bi-geo-alt-fill me-2 text-orange"></i>
-      <address class="text-muted mb-0">
-        1, Mansatta Industrial Area,<br>
-        Behind Nayara Petrol Pump,<br>
-        Gondal Road, Rajkot
-      </address>
-    </li>
-    
-    <!-- Email with Icon -->
-    <li class="d-flex align-items-center mb-2">
-      <i class="bi bi-envelope-fill me-2 text-orange"></i>
-      <a href="mailto:info@ashrayautoagency.com" class="text-decoration-none text-muted">
-        info@ashrayautoagency.com
-      </a>
-    </li>
-
-    <!-- Mobile Number with Icon -->
-    <li class="d-flex align-items-center mb-2">
-      <i class="bi bi-telephone-fill me-2 text-orange"></i>
-      <a href="tel:+919427463698" class="text-decoration-none text-muted">
-        +91 94274 63698
-      </a>
-    </li>
-
-    
-  </ul>
-</div>
-<!-- back to top button -->
-<footer class="bg-light text-dark pt-4 position-relative">
-  <div class="container text-center">
-    <!-- Your existing footer content -->
-
-    <!-- Back to Top Button (square with text) -->
-    <button id="backToTopBtn" class="btn btn-orange btn-sm position-absolute d-flex align-items-center gap-2"
-            style="bottom: 10px; right: 15px; border-radius: 4px;">
-      <i class="fas fa-arrow-up"></i>
-      <span>Back to Top</span>
-    </button>
+  
   </div>
 </footer>
 
 
 
-<script>
-  document.getElementById("backToTopBtn").addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-</script>
+
+
+    
+
+
+
 
 
 
@@ -490,10 +495,7 @@
     </div>
   </div>
 
-  <!-- Bottom Bar -->
-  <div class="text-center py-3" style="background-color: #f8f9fa;">
-    © 2025 Ashray Auto Agency. All rights reserved.
-  </div>
+  
 
   <!-- Footer Custom CSS -->
   <style>
